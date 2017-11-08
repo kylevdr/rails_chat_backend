@@ -4,8 +4,11 @@ class MessagesController < ApplicationController
     render json: { messages: @messages }, status: :ok
   end
 
-  def show
-    @message = Message.find(params[:id])
-    render json: { message: @message }, status: :ok
+  def create
   end
+
+  # def show
+  #   @message = Message.find(params[:id])
+  #   render json: { message: @message }, status: :ok
+  # end
 end

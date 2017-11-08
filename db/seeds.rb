@@ -6,8 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+chatroom = Chatroom.create(name: 'Default Chatroom')
+
 10.times do
   Message.create({
+    chatroom: chatroom,
     author: Faker::OnePiece.character,
     content: Faker::OnePiece.quote
   })
