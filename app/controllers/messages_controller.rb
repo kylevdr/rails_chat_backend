@@ -7,8 +7,8 @@ class MessagesController < ApplicationController
   def create
   end
 
-  # def show
-  #   @message = Message.find(params[:id])
-  #   render json: { message: @message }, status: :ok
-  # end
+  def show
+    @message = Message.find(params[:id])
+    render json: { message: @message }, status: :ok
+  end
 end
