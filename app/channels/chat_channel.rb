@@ -4,7 +4,7 @@ class ChatChannel < ApplicationCable::Channel
   end
 
   def speak (data)
-    ActionCable.server.broadcast('chat_channel', {author: data['author'], content: data['content']})
+    ActionCable.server.broadcast('chat_channel', data['message'])
   end
 
   def unsubscribed
